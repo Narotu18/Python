@@ -1,11 +1,13 @@
 # Autor: Naruto_da
-#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+#!/usr/bin/env python
 import sys
 def real_compute(salary,tax,deduct):
     salary_id=salary.split(':')[0]
     salary_mon=int(salary.split(':')[1])
     social = salary_mon*0.08 + salary_mon*0.02 + salary_mon*0.005 +salary_mon*0.06    #五险一金
     pay_tax = (salary_mon-3500-social)*tax-deduct    #纳税额
+    print(pay_tax)
     last_payment = salary_mon-social-pay_tax
     print("{}:{:.2f}".format(salary_id,last_payment))
 def real_salary():
